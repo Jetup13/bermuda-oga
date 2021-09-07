@@ -647,17 +647,25 @@ void SystemStub_SDL::handleEvent(const SDL_Event &ev, bool &paused) {
 				_pi.space = pressed;
 				break;
 			case SDL_CONTROLLER_BUTTON_X:
-				_pi.shift = pressed;
+				_pi.tab = pressed;
 				break;
 			case SDL_CONTROLLER_BUTTON_Y:
+				_pi.shift = pressed;
+				break;
+			case SDL_CONTROLLER_BUTTON_RIGHTSHOULDER:
+				_pi.ctrl = pressed;
+				break;
+			case SDL_CONTROLLER_BUTTON_LEFTSHOULDER:
 				_pi.ctrl = pressed;
 				break;
 			case SDL_CONTROLLER_BUTTON_BACK:
 				_pi.escape = pressed;
 				break;
 			case SDL_CONTROLLER_BUTTON_GUIDE:
+				_pi.escape = pressed;
+				break;
 			case SDL_CONTROLLER_BUTTON_START:
-				_pi.tab = pressed;
+				_pi.escape = pressed;
 				break;
 			case SDL_CONTROLLER_BUTTON_DPAD_UP:
 				if (pressed) {
